@@ -1,0 +1,19 @@
+.thumbnail_wrapper
+    padding: 8%
+.thumbnail_img
+  width: 10vw
+  height: 10vw
+.thumbnail
+  display: flex
+  flex-direction: column
+  justify-content: center
+  order: 1
+@media (max-width: 480px)
+  .thumbnail_wrapper
+    padding: 2%
+  .thumbnail
+    flex-direction: row
+    order: 2
+  .thumbnail_img
+    width: 4em
+    height: 4em

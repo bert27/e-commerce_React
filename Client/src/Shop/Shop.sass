@@ -1,0 +1,186 @@
+$Color1: rgb(70,184,205)
+$Color_Cuerpo: rgb(235,236,237)
+$ColorFooter: black
+$ColorFooter2: $Color1
+.ProductInfo
+  display: flex
+  width: 100%
+  height: auto
+  flex-direction: column
+
+.ProductInfo:hover
+  color: #3eb1c8
+.BuyButtonHiden
+  cursor: pointer
+  background-color: #3eb1c8
+  visibility: hidden
+.BuyButtonShow
+  cursor: pointer
+  background-color: #3eb1c8
+  color: white
+  visibility: visible
+  text-align: center
+  padding: 4% 0% 4% 0%
+  font-size: 2vw
+  font-weight: bold
+  position: relative
+.Buscador_input
+  border: 0
+  background: transparent
+  padding: 3%
+.Buscador
+  display: flex
+  width: 40%
+  height: 100%
+  border: 1px solid #ddd
+  border-radius: 50px
+  background-color: #efefef
+  padding: 0% 0% 0% 3%
+  align-items: center
+  order: 2
+.Shop-header
+  display: flex
+  width: 100%
+  flex-direction: row
+  font-size: 2vw
+  align-items: center
+  justify-content: space-around
+  padding: 1%
+a:hover
+  text-decoration: none
+.Barra
+  height: 1vh
+  background-color: $Color1
+.Shop-header .img-fluid
+  margin-left: 1%
+  max-width: 36vw
+.FunctionsHeader
+  display: flex
+  width: 30%
+  font-size: 2vw
+  flex-direction: row
+  align-items: center
+  justify-content: space-evenly
+  order: 3
+.Footer
+  min-height: 7.6vw
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: start
+  background-color: $Color1
+.Footer-Name
+  margin-left: 1%
+  color: white
+.ContenedorProductos
+  width: 95%
+  margin: auto
+  height: 100%
+  display: flex
+  flex-wrap: wrap
+  margin-top: 2%
+.Login
+  margin-right: 5%
+  cursor: pointer
+  display: flex
+  align-items: center
+  width: min-content
+.Button a
+  color: white
+.Cart
+  cursor: pointer
+  display: flex
+  align-items: center
+.Producto-Nombre
+  font-size: 2vw
+.Producto-Nombre:hover
+  text-decoration: none
+
+
+.Producto-Descuento
+  color: red
+.Producto-PrecioA
+  color: #666
+  text-decoration: line-through
+  white-space: nowrap
+.Producto-Precio
+  white-space: nowrap
+  color: black
+  font-weight: 700
+  font-size: 2vw
+  margin-top: 2%
+.FrasePrecioProducto
+  display: flex
+  font-size: 2vw
+  justify-content: space-around
+  padding: 2%
+  width: 100%
+.Producto-Foto
+  padding: 20%
+
+.Producto
+  text-align: center
+  cursor: pointer
+  width: 23%
+  background-color: white
+  border: 0.1vw solid #5c5b638f
+  margin: 1%
+
+@media (max-width: 480px)
+  .ContenedorProductos
+    margin-top: 0
+    width: 100%
+  .FrasePrecioProducto
+    font-size: 4vw
+  .Producto-Nombre
+    font-size: 4vw
+  .Producto-Precio
+    font-size: 4vw
+  .FunctionsHeader
+    width: 60%
+    font-size: 4vw
+  .Buscador
+    width: 100%
+    order: 3
+    font-size: 4vw
+    margin: 2%
+  .Shop-header
+    flex-direction: row
+    flex-wrap: wrap
+  .Producto
+    width: 50%
+    margin: 0
+    border: 0.05vw solid #b6cee6
+  .img-fluid
+    max-width: 100%
+    height: auto
+  .Ico
+    margin-left: 5%
+    color: $Color1
+    font-size: 1.2em
+  .Link
+    display: flex
+    color: black
+    text-decoration: none
+  .LinkF
+    color: black
+    text-decoration: none
+
+
+
+//Scrollbar
+
+/* Scrollbar color */
+::-webkit-scrollbar
+  width: 10px
+
+::-webkit-scrollbar-track
+  background: #e9e2dc
+
+::-webkit-scrollbar-thumb
+  background: $Color1
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+  background: rgb(83, 70, 61)

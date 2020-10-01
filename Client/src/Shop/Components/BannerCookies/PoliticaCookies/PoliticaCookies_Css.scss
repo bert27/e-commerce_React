@@ -1,0 +1,43 @@
+.CPolitica1{
+	background-color: white;
+	padding: 4%;
+	line-height: 47px;
+	box-shadow: 0 0 19px black;
+	font-size: 4vh;
+}
+.CPolitica{
+    background: linear-gradient(88deg,rgb(97,125,131),rgb(140,114,93));
+//background-image: url('./fondo3.png');
+padding: 8% 2% 2% 2% !important;
+display: block;
+width: 100%;
+/* min-height: 100vh; */
+/* position: relative; */
+/* padding: 3% 1%; */
+font-size: 3vw;
+color: black;
+text-align: justify;
+/* text-shadow: 4px 1px 20px black; */
+;
+/* background-repeat: no-repeat; */
+background-size: cover;
+background-position-x: center;
+background-position-y: inherit;
+background-origin: inherit;
+//text-shadow: 0 0 20px black;
+}
+.CPolitica1 > p{
+//	margin-bottom: 0 !important;
+}
+.CPolitica1 > p > h5 {
+	  font-weight: bold;
+text-align: center;
+}
+.CPolitica1 > p > h4{
+	  font-weight: bold;
+text-align: center;
+}
+
+.BarraSeparadora{
+		background:rgb(231, 255, 250);
+}

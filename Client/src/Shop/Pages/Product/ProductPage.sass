@@ -1,0 +1,111 @@
+.ProductPicAndThumbail
+  display: flex
+  flex-direction: row
+  width: 90%
+  margin: auto
+.ProductPicAndThumbail2
+  display: flex
+  flex-direction: column
+
+.DescriptionProduct
+  display: flex
+  order: 3
+  flex-direction: column
+  width: auto
+  height: 100%
+  border-style: solid
+  border-color: #efefef
+  flex-direction: column
+  border-top: 1vh solid #3eb1c8
+
+.Body-ProductPage
+  background-color: white
+  width: 100%
+  height: auto
+  display: flex
+  flex-direction: column
+  margin-bottom: 4.3%
+.ProductoPic
+  display: flex
+  width: 100%
+  height: auto
+  order: 2
+  justify-content: center
+  align-items: center
+.ProductoPic_Img
+  width: 30vw
+  height: 30vw
+.ProductPage
+  display: flex
+  width: 100%
+  height: 100%
+  flex-direction: column
+
+.Volver > span
+  color: black
+.DescriptionProduct_Des
+  padding: 2%
+  font-size: 2vw
+
+.Price
+  display: flex
+  color: rgb(70,184,205)
+  font-size: 4vw
+  font-weight: bold
+  text-align: center
+.stock
+  color: green
+.Price_ProductPage
+.PriceM
+  display: none
+@media (max-width: 480px)
+  .DescriptionProduct_Des
+    font-size: 6vw
+  .PriceM
+    display: flex
+    font-size: 12vw
+    width: 40%
+    justify-content: center
+    font-weight: bold
+    color: rgb(70,184,205)
+  .ProductPicAndThumbail
+    display: flex
+    flex-direction: column
+  .ProductoPic
+    order: 1
+  .ProductoPic_Img
+    width: 14em
+    height: 14em
+  .Price
+    display: none
+  .Price_ProductPage
+    display: flex
+    width: 100%
+    height: auto
+    flex-direction: row
+    position: fixed
+    left: 0
+    bottom: 0
+    background: white
+    justify-content: center
+    align-items: center
+    -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,.54)
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.54)
+  .DescriptionProduct
+    display: flex
+    width: 100%
+    height: 100%
+    margin: auto
+    border-style: solid
+    border-color: #efefef
+    flex-direction: column
+    border-top: 1vh solid #3eb1c8
+    margin-bottom: 20%
+
+  .ProductName
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    border-bottom: solid #efefef
+  .Footer
+    display: none
