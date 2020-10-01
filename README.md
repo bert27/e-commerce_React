@@ -7,19 +7,14 @@ Version 3:
 <img src="https://i.ibb.co/PTM1B2r/Captura-App.jpg" >
 </div>
 
-<br/>
-<br/>
 
 1. Download
-2. Place in the Ecommerce folder and put -> npm i to install all the dependencies.
-3. In the same folder put -> npm run dev.
-
-Start the Nodejs server at the same time!
+2. Place in the Client folder and put -> npm i to install all the dependencies.
+3. In the same folder put -> npm run start.
+4. In Folder Server put-> nodemon server.js
 
 Nodejs on port 4000.
 React client on port 3000.
-
-Localhost: 3000.
 
 Fully responsive with flexbox.
 
@@ -28,6 +23,3 @@ Instructions for use:
 Buy any product by clicking on the add button.
 In the cart you can add more quantity of the same product or delete.
 Calculate individual prices and the total of all.
-
-
-</div>
