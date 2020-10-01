@@ -39,13 +39,14 @@ console.log("------------".bgGreen);
 console.log("Añadiendo producto nuevo en la lista, Items: " + N_Items  + "".bgGreen);
 var Product=req.body;
 console.table(Product);
-
+console.table(ProductList);
   if(ProductList[N_Items]==undefined){
     ProductList[N_Items] = {};
     }
 //Recorre la lista de productos y comprueba la id. Si la id ya existe en la lista, añade cantidad a ese item.
 //Si no lo esta, añade item nuevo en la lista:
       var check="no";
+      if(ProductList.length>0){
       for(var i=0;i<ProductList.length;i++){
         //Esta en la lista y avisa cambiando el valor de check
         var ID=ProductList[i].ID;
@@ -61,7 +62,7 @@ console.table(Product);
 
               console.log(".....");
               console.log(ProductList[i].Nombre + " / " + ID);
-      }}
+      }}}
 //No esta en la lista:
       if(check=="no"){
         console.log(("Añadiendo nuevo").bgRed);
