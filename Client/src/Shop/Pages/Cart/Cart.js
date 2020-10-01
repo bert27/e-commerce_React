@@ -141,44 +141,45 @@ render() {
   </div>;
   var NProducts=this.state.N_Items;
   var Narticulos=<>Tienes ({NProducts}) productos en el carrito</>;
-  var Info=  <div className="DivCart">
-
-<div className="TotalPrice">
-   <div>Total de Productos:</div>
-   <div>{this.state.TotalPrice} €</div>
- </div>
-
-            <div>
-            ¡Gastos de envío gratis!
-            *Solo para España Península</div>
-
-            <div className="TextCart">
-                      <div>
-                      <FontAwesomeIcon icon={faTruck} className="IcoF2"/>
-                       Política de seguridad confianza online
-                       </div>
-
-                        <div>
-                        <FontAwesomeIcon icon={faShieldAlt} className="IcoF2"/>
-                         Entrega en 24-72 horas laborables
-                         </div>
-             </div>
-
-             <div className="BannerBuy">
-    {BotonComprar}
-            <div className="Button">Comprar</div>
-            </div>
-    </div>;
   var ProductList=this.state.ProductList;
   var List="";
   var Header="";
   var Cart="";
+  var Info=
+  <div className="DivCart">
+      <div className="TotalPrice">
+           <div>Total de Productos:</div>
+           <div>{this.state.TotalPrice} €</div>
+      </div>
+
+      <div>
+      ¡Gastos de envío gratis!
+      *Solo para España Península</div>
+
+      <div className="TextCart">
+      <div>
+            <FontAwesomeIcon icon={faTruck} className="IcoF2"/>
+             Política de seguridad confianza online
+            </div>
+
+            <div>
+            <FontAwesomeIcon icon={faShieldAlt} className="IcoF2"/>
+             Entrega en 24-72 horas laborables
+             </div>
+       </div>
+
+       <div className="BannerBuy">
+              {BotonComprar}
+              <div className="Button">Comprar</div>
+       </div>
+    </div>;
+
 
   if(NProducts==0){
     Cart=
     <>
 
-    <div className="DivCart-empty">
+    <div className="DivCart-empty" data-testid='without_product'>
 
 
     <div className="DivCart-Title">
@@ -206,8 +207,8 @@ var Header=<div className="DivCart_SubTitle">
 </div>;
 
 var List=Object.keys(ProductList).map((item,i) =>
-<div key={i} className="ProductCart">
-<Link  className="LinkC" to={
+<div key={i} className="ProductCart" data-testid='with_product' >
+<Link  className="LinkC"  to={
     {
 id:ProductList[item].id,
 pathname: "/Product/" + ProductList[item].id,
@@ -275,7 +276,7 @@ return (
     <div className="Body-Cart">
             {this.state.LoadList}
               <MessagesShop/>
-              <div className="DivCartP">
+              <div className="DivCartP"  data-testid='Container'>
                 {Cart}
                 {Info}
               </div>

@@ -25,8 +25,9 @@ it('Funcion De componente Enzyme', () => {
   const sut = shallow(<GetItems />);
   expect(sut.instance().Prueba(1)).toBe(1);
 });
-
+/*
 it('Funcion De componente Enzyme Fetch', () => {
   const sut = shallow(<GetItems />);
   expect(sut.instance().componentDidMount(1)).toBe(1);
 });
+*/
