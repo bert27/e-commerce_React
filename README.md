@@ -1,4 +1,21 @@
 # Simple E-commerce in React.
+
+# Update: Administration panel.
+/Admin
+User: Admin or admin
+password: 123
+<div>
+<img src="https://i.ibb.co/WBpn9bY/UPDATE-ecomerce.jpg" >
+</div>
+#2 cruds: One from clients and one from products.
+Folders: Pages -> AdminPanel.
+EndPoints: Services -> Admin -> Client and Services -> Admin -> Products.
+Folder in NodeJS: Shop -> Clients_AdminShop and Products_AdminShop.
+
+#! These cruds do not cause changes in the store. At the moment they are separated.
+
+//////////////////////////////////////////////////////////////////////////////
+
 A store in react in a simple way. All that remains is to implement the database. I recommend MongoDB.  The Data is saved on the NodeJS server.
 Pc and Mobile.
 

@@ -8,7 +8,12 @@ var N_Items=0;
 var N_ItemsTotal=0;
 var ProductList=[];
 var TotalPrice=0;
-module.exports.servidor = {
+
+module.exports = {
+  path: path,
+  app: app,
+ 	express: express,
+
   Start: function() {
   const port=4000;
   app.listen(port,'0.0.0.0', () =>
@@ -112,6 +117,7 @@ app.put('/Shop/ClientGetItems', (req, res) => {
       res.end();
         });
 
+
 //LoginUser
 app.put('/Shop/LoginUser', (req, res) => {
     console.log(("Usuario:" + req.body.User + " Logeado").bgGreen);
@@ -175,6 +181,11 @@ app.put('/Shop/AddProduct', (req, res) => {
           res.send(DataSend);
           res.end();
   });
+
+
+
+
+
   },
 
 
