@@ -8,29 +8,26 @@ class Form_Login extends React.Component {
   constructor(props) {
     super(props);
         this.state = {
-NameUser:"",
-PasswordUser:"",
-DataUser:[],
-Message:<>Introduce una contraseña</>,
-LoginService:<></>,
+        NameUser:"",
+        PasswordUser:"",
+        DataUser:[],
+        Message:<>Introduce una contraseña</>,
+        LoginService:<></>,
                 }}
-GetName(event) {
-var NameUser=this.state.NameUser;
-var DataUser=this.state.DataUser;
+  GetName(event) {
+          var NameUser=this.state.NameUser;
+          var DataUser=this.state.DataUser;
 
-//Evento que recoge el valor del input:
-  this.setState({
-    NameUser: event.target.value}, () => {
-      DataUser.Name=this.state.NameUser;
-  });
-//Lo guarda agrupado en un estado que contiene un objeto.
-  this.setState({DataUser: DataUser}, () => {
-      console.table(DataUser);
-  });
-
-}
-
-
+          //Evento que recoge el valor del input:
+            this.setState({
+              NameUser: event.target.value}, () => {
+                DataUser.Name=this.state.NameUser;
+            });
+          //Lo guarda agrupado en un estado que contiene un objeto.
+            this.setState({DataUser: DataUser}, () => {
+                console.table(DataUser);
+            });
+  }
 
 GetPassword(event) {
   var PasswordUser=this.state.PasswordUser;
@@ -46,39 +43,30 @@ var DataUser=this.state.DataUser;
 }
 LoginAdmin(data){
             if(data[0]=="Ok"){
-              console.log("Usuario validado");
-            this.setState({
-              Message: <>Usuario Validado</>,
-            });
-            //Login
-            this.props.Auth();
-
+                  //Login
+                  console.log("Usuario validado");
+                  this.setState({Message:<>Usuario Validado</>});
+                  this.props.Auth();
             }
             else{
-                this.setState({
-                    Message: <div className="ErrorAuthAdmin">Usuario o contraseña incorrectos</div>,
-                  });
+                    this.setState({Message: <div className="ErrorAuthAdmin">Usuario o contraseña incorrectos</div>});
             }
 
 }
 ButtonLogin(){
-  var DataUser=this.state.DataUser;
-  console.table(DataUser);
-  var name=DataUser.Name;
-  var password=DataUser.Password;
+        var DataUser=this.state.DataUser;
+        console.table(DataUser);
+        var name=DataUser.Name;
+        var password=DataUser.Password;
+      if(name==undefined){
+        name="Vacio";
+      }
 
-if(name==undefined){
-  name="Vacio";
-}
-
-this.setState({
-  LoginService: <LoginAdminService
-  Name={name}
-  Password={password}
-  LoginAdmin={this.LoginAdmin.bind(this)}/>,
-});
-
-
+      this.setState({
+        LoginService: <LoginAdminService
+        Name={name}
+        Password={password}
+        LoginAdmin={this.LoginAdmin.bind(this)}/>});
 }
 render() {
   return (
@@ -94,7 +82,6 @@ render() {
     </div>
 
 <div className="Form-Inputs">
-
               <div className="EmailLogin">
               <FontAwesomeIcon icon={faUser} className="IcoF"/>
                 Admin:
@@ -122,7 +109,6 @@ render() {
 
               </div>
               <div className="Button" onClick={()=>{this.ButtonLogin()}}>Entrar</div>
-
 
   </div>
   {this.state.LoginService}

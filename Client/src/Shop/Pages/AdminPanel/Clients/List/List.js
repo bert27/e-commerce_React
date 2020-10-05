@@ -16,19 +16,8 @@ class List extends React.Component {
   componentDidUpdate(prevProps){
 
   if ( this.props.ElementAdd !== prevProps.ElementAdd ) {
-        /*  console.table("Añadiendo nuevo elemento en lista");
-          var Products=this.state.ProductsData;
-          console.table(Products);
-          var NewProduct=this.props.ElementAdd;
-                      if(Products[0]=="Vacio"){
-
-                        Products[0]=NewProduct;
-                      }else{
-                          Products.push(NewProduct);
-                      }
-                    this.GetProducts(Products);*/
-              var Products=this.props.ElementAdd;
-              this.GetProducts(Products);
+        var Products=this.props.ElementAdd;
+        this.GetProducts(Products);
   }
   if ( this.props.ElementsFormServer !== prevProps.ElementsFormServer ) {
           console.table("Actualizando Lista sin pasar por el servidor");
@@ -40,7 +29,7 @@ class List extends React.Component {
           var Element=Products.Position;
           var Position=Element.Position;
 
-Products=this.state.ProductsData;
+        Products=this.state.ProductsData;
         Products.splice(Position,1);
 
       console.table(Products);
@@ -96,15 +85,8 @@ ProductsData={this.state.ProductsData}
 
 return (
 <div className="ListAdmin">
-
-    List
-
-
+  List
   {this.state.ProductsView}
-
-
-
-
 </div>);
     }
             }
