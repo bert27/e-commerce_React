@@ -18,7 +18,7 @@
     "gulp-run": "^1.7.1",
     "gulp-run-command": "0.0.10",
     "gulp-shell": "^0.8.0",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-new-window": "^0.1.2",
